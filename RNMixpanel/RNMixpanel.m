@@ -266,8 +266,6 @@ RCT_EXPORT_METHOD(reset:(NSString *)apiToken
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject) {
     [[self getInstance:apiToken] reset];
-    NSString *uuid = [[NSUUID UUID] UUIDString];
-    [[self getInstance:apiToken] identify:uuid];
     resolve(nil);
 }
 
